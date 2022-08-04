@@ -10,14 +10,14 @@ let package = Package(
         .library(name: "PostgresKit", targets: ["PostgresKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/postgres-nio.git", from: "1.4.0"),
+        .package(url: "https://github.com/prism-ipx/prism-postgres-nio.git", from: "1.11.2"),
         .package(url: "https://github.com/vapor/sql-kit.git", from: "3.5.0"),
         .package(url: "https://github.com/vapor/async-kit.git", from: "1.0.0"),
     ],
     targets: [
         .target(name: "PostgresKit", dependencies: [
             .product(name: "AsyncKit", package: "async-kit"),
-            .product(name: "PostgresNIO", package: "postgres-nio"),
+            .product(name: "PostgresNIO", package: "prism-postgres-nio"),
             .product(name: "SQLKit", package: "sql-kit"),
         ]),
         .testTarget(name: "PostgresKitTests", dependencies: [
