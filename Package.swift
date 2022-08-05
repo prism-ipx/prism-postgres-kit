@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .target(name: "PostgresKit", dependencies: [
             .product(name: "AsyncKit", package: "async-kit"),
-            .product(name: "PostgresNIO", package: "postgres-nio"),
+            .product(name: "PostgresNIO", package: "prism-postgres-nio"),
             .product(name: "SQLKit", package: "sql-kit"),
         ]),
         .testTarget(name: "PostgresKitTests", dependencies: [
